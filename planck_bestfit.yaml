@@ -1,0 +1,63 @@
+# Planck 2018 Best-Fit Cosmological Parameters
+# Used as baseline for Dark Geometry validation
+
+cosmology:
+  # Baryon density
+  omega_b: 0.02237
+  Omega_b_h2: 0.02237
+  
+  # Cold dark matter density  
+  omega_cdm: 0.1200
+  Omega_cdm_h2: 0.1200
+  
+  # Hubble parameter
+  H0: 67.36
+  h: 0.6736
+  
+  # Primordial spectrum
+  A_s: 2.1e-9
+  ln10^10A_s: 3.044
+  n_s: 0.9649
+  
+  # Reionization
+  tau_reio: 0.0544
+  z_reio: 7.67
+
+derived:
+  # Matter density
+  Omega_m: 0.3138
+  
+  # Dark energy density
+  Omega_Lambda: 0.6862
+  
+  # σ₈ (ΛCDM value)
+  sigma8_LCDM: 0.811
+  
+  # σ₈ (DG value)
+  sigma8_DG: 0.773
+  
+  # Sound horizon at drag epoch
+  r_s_drag: 147.09  # Mpc
+  
+  # Age of universe
+  age: 13.797  # Gyr
+
+dark_geometry:
+  # All derived from first principles
+  alpha_star: 0.075
+  beta: 0.666666667
+  S_max: 0.882
+  k_J_today: 0.005  # h/Mpc
+  rho_c: "rho_DE"  # critical density = dark energy density
+
+observations:
+  # Weak lensing σ₈
+  sigma8_WL:
+    DES_Y3: 0.759
+    DES_Y3_err: 0.021
+    KiDS_1000: 0.766
+    KiDS_1000_err: 0.020
+    
+  # SH0ES H0
+  H0_SH0ES: 73.04
+  H0_SH0ES_err: 1.04
