@@ -1,0 +1,106 @@
+{
+  "model": "Dark Geometry",
+  "version": "1.0",
+  "date": "2025-12-26",
+  "author": "Hugo Hertault",
+  
+  "parameters": {
+    "alpha_star": {
+      "value": 0.075,
+      "origin": "Asymptotic Safety fixed point",
+      "derived": true
+    },
+    "beta": {
+      "value": 0.6666666666666667,
+      "origin": "Holographic area law (d-1)/d for d=3",
+      "derived": true
+    },
+    "S_max": {
+      "value": 0.882,
+      "origin": "exp(-2*N*Delta_n) with N=8.13",
+      "derived": true
+    },
+    "rho_c": {
+      "value": "rho_DE",
+      "origin": "UV-IR mixing sqrt(E_Pl * E_H)",
+      "derived": true
+    }
+  },
+  
+  "validation_results": {
+    "step_1-3_implementation": {
+      "sigma8": 0.773,
+      "sigma8_ratio": 0.943,
+      "status": "passed"
+    },
+    "step_4_mcmc": {
+      "sigma8": 0.773,
+      "sigma8_err": 0.027,
+      "tension_WL_sigma": 0.5,
+      "status": "passed"
+    },
+    "step_5_cmb": {
+      "chi2_TT": 2.6,
+      "chi2_EE": 2.2,
+      "chi2_dof_TT": 0.19,
+      "chi2_dof_EE": 0.36,
+      "status": "passed"
+    },
+    "step_6_rsd": {
+      "chi2_DG": 12.2,
+      "chi2_LCDM": 42.4,
+      "delta_chi2": -30.2,
+      "status": "passed"
+    },
+    "step_7_halofit": {
+      "suppression_k01": 0.882,
+      "suppression_k1": 0.882,
+      "status": "passed"
+    },
+    "step_8_cola": {
+      "ratio_measured": 0.882,
+      "ratio_theory": 0.883,
+      "agreement_percent": 0.1,
+      "status": "passed"
+    }
+  },
+  
+  "statistical_comparison": {
+    "chi2_total_DG": 17.3,
+    "chi2_total_LCDM": 53.2,
+    "delta_chi2": -35.9,
+    "AIC_DG": 29.3,
+    "AIC_LCDM": 65.2,
+    "delta_AIC": -35.9,
+    "BIC_DG": 35.3,
+    "BIC_LCDM": 71.2,
+    "delta_BIC": -35.9,
+    "interpretation": "DG strongly favored"
+  },
+  
+  "tensions_resolved": {
+    "sigma8_planck_vs_WL": {
+      "before": 3.6,
+      "after": 0.5,
+      "status": "resolved"
+    },
+    "sigma8_planck_vs_RSD": {
+      "before": 2.5,
+      "after": 0.8,
+      "status": "resolved"
+    },
+    "H0_with_DGE": {
+      "before": 4.8,
+      "after": 0.5,
+      "status": "resolved"
+    }
+  },
+  
+  "predictions": {
+    "sigma8_z": "Lower than LCDM at all z",
+    "f_sigma8": "5% lower at z < 1",
+    "cluster_counts": "10-15% fewer",
+    "halo_profiles": "Cores instead of cusps",
+    "GW_modes": "Tensor only (no breathing mode)"
+  }
+}

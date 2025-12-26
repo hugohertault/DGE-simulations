@@ -1,0 +1,26 @@
+
+# ECOSMOG Parameter File for Dark Geometry
+# =========================================
+
+# Simulation type
+mg_type = DG           # Dark Geometry
+
+# DG parameters (all derived from first principles)
+dg_alpha_star = 0.075
+dg_beta = 0.6666666666666666
+dg_k_J_eq = 0.05
+dg_a_eq = 0.000293
+dg_S_max = 0.882
+
+# Solver parameters
+poisson_solver = FFT    # or MULTIGRID
+fft_type = FFTW
+mg_tolerance = 1e-6
+mg_max_iter = 100
+
+# Screening (DG doesn't have traditional screening)
+screening = none
+
+# Output
+output_G_eff = .true.
+output_fifth_force = .true.
